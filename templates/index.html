@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Prototype</title>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #chat-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #chat-messages {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .message {
+            margin-bottom: 10px;
+        }
+
+        .user-message {
+            text-align: right;
+            color: #007bff;
+        }
+
+        .bot-message {
+            text-align: left;
+            color: #28a745;
+        }
+
+        #user-input {
+            width: 80%;
+            padding: 8px;
+            margin-right: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #send-button {
+            padding: 8px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #send-button:hover {
+            background-color: #0056b3;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <ul id="chat-messages"></ul>
+        <div>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button type="button" id="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script>
+        async function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            if (userInput.trim() === '') return;
+            const chatMessages = document.getElementById('chat-messages');
+            const userMessage = document.createElement('li');
+            userMessage.classList.add('message', 'user-message');
+            userMessage.textContent = `You: ${userInput}`;
+            chatMessages.appendChild(userMessage);
+    
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `user_input=${encodeURIComponent(userInput)}`,
+                });
+    
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+    
+                const data = await response.json();
+                const botMessage = document.createElement('li');
+                botMessage.classList.add('message', 'bot-message');
+                botMessage.textContent = `ChatBOT: ${data.message}`;
+                chatMessages.appendChild(botMessage);
+    
+                console.log(data);
+            } catch (error) {
+                console.error('Fetch error:', error);
+            }
+    
+            document.getElementById('user-input').value = '';
+        }
+    </script>
+    
+    
+</body>
+</html>

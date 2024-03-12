@@ -1,0 +1,148 @@
+{
+    "intents": [
+      {
+        "tag": "Greetings",
+        "patterns": [
+          "Salam",
+          "Fen",
+          "Salamalaykom",
+          "Wach",
+          "Fen had lghbour",
+          "Bonjour cv"
+        ],
+        "responses": [
+          "Salam! Kifach bghiti n3awnek lyoom?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "CourtesyGreeting",
+        "patterns": [
+          "Kif dayer?",
+          "Salam, kif dayer lyoom?",
+          "Salamalaykom, kif dayer lyoom?",
+          "Fen, cv?",
+          "Ach kat 3awd, kif dayer?",
+          "Bikhir?",
+          "Rak mzyaan?",
+          "Natmanak tkkon bikhir?",
+          "Nta bikhir?",
+          "Labas?",
+          "Kifach kayn?",
+          "Wach kayn noved?",
+          "Kif dayer?",
+          "Kifach had lyoum?"
+        ],
+        "responses": [
+          "Ana labas, w nta kifach?",
+          "Salam, ana labas. W nta?",
+          "Wa 3alaykom salam, ana mzyaan. Shnu ljadid?",
+          "Ana hamdellah mzyaan, shukran. W nta?",
+          "Ana bikhir, choukran. W nta?",
+          "Labas, shukran. Nta bikhir?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "RealNameQuery",
+        "patterns": [
+          "chno smitek?",
+          "ckon nta?",
+          "ch7al f3amrek?",
+          "minin nta",
+          "mnin nta?"
+        ],
+        "responses": [
+          "Ma3ndich smya mo7dada momkon tgol lia chatbot maghribi, , fach bghiti n3awnek lyoom",
+          "Ana chatbot maghribi, fach bghiti n3awnek lyoom",
+          "Ana chatbot maghribi, fach momkin n3awnek",
+          "ana chatBOT mn a9dam o a3ra9 balad fl3aalaam lmaghrib, fach bghiti n3awnek lyoom",
+          "chatbot maghiribi, fach bghiti n3awnek lyoom"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "RealName",
+        "patterns": [
+          "Chkon saybek?"
+        ],
+        "responses": [
+          "Sayabni BADREDDINE AIT EL KHADIR o howa li 3alamnii"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "NameQuery",
+        "patterns": [
+          "momkin tktab lia b 7orof 3arabiya"
+        ],
+        "responses": [
+          "نعم فاش بغيتي نعاونك اليوم"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Moro",
+        "patterns": [
+          "ممكن تقول لي شي حاجة على تاريخ المغربي "
+        ],
+        "responses": [
+        "المغرب هو بلاد ذات جذور عميقة في التاريخ، والاكتشافات الأخيرة تبثت عمق هذه الجذور لي تمتد إلى العصور القديمة. ثراء الحضارة المغربية كاي رجع لآلاف السنين، المغرب شهد على تعاقب لعديد من الشعوب والحضارات،  من الفينيقيين والقرطاجيين والرومانيين والونداليين والبيزنطيين والقوط الغربيين. الفتوحات الإسلامية عاوناتو في دخول الإسلام، لي ترك بصمة بارزة في تاريخ المغرب."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Semaine",
+        "patterns": [
+          " gol lia ayam li fsimana"
+        ],
+        "responses": [
+          "kayn ltin, tlat, larbe3, lkhmis, jam3a, sabt, l7ed"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Mois",
+        "patterns": [
+          "Ach nahoma chhora li kaynin"
+        ],
+        "responses": [
+          "Janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre o décembre"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Jokes",
+        "patterns": [
+          "gol lia chi nokta",
+          "zidni nokta akhra"
+        ],
+        "responses": [
+          "Galik hadou wahad jouj kanou ghadin flghaba houma itla9aw m3a sba3, wahad fihoum haz hajra ou 3tah lrass ou drabha bjarya, dar bachi chouf wach sahbou tab3ou sa3a l9ah mazal wa9af goudam ssba3, galih: ach ketssena a sahbi houwa ijawbou: mali ana li drabtou? ptdr",
+          "wahed 5ayna mkle5 sayg tomobil wa9fo bolici galo chaftak mamdayerch samta galo nsitha fsrwal la5or."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "IA",
+        "patterns": [
+          "Wach kat faker b7alna"
+        ],
+        "responses": [
+          "IA momkin idir chii maham kay dirhom bnadam mn khilal chii khawarizmiyat, walakin IA kay fta9er l lwa3y lbachari l7a9i9i o ltajriba datiya idan IA ola ana machi b7alkom"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "GoodBye",
+        "patterns": [
+          "chokran ela ma3lomat", "bay bay", "bslama", "allah i3awn", "tla7"
+        ],
+        "responses": [
+          "Bslama elik, o9tma htajitini ana hna"
+        ],
+        "context": [""]
+      }
+    ]
+  }
+  
