@@ -14,6 +14,7 @@ Moroccan Darija. This project significantly contributes to the enhancement of di
 accessibility in the Moroccan context and paves the way for future innovative 
 applications in automated communication.
 
-
+### Screen de conversation avec chatbot – App Web
 ![ScreenWeb2](https://github.com/badreddineEL27/ChatBotDarija/assets/89709529/d46eabf0-5e40-41be-817b-0be7b90a2682)
+### Screen de conversation avec chatbot – colab
 ![ScreenConvColab](https://github.com/badreddineEL27/ChatBotDarija/assets/89709529/475e448e-f175-4b04-b034-00457b70a436)
